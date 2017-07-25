@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "StarveIO Extensions",
+  "short_name": "StarveIO Mods",
+  "version": "0.0.2.5",
+  
+  "content_scripts": [
+    {
+      "matches": [ "http://starve.io/*" ],
+      "js": [ "content.js" ]
+    }
+  ],
+  
+  "web_accessible_resources": [ "script.js", "lib/sweetalert.css", "lib/sweetalert.min.js" ]
+}
