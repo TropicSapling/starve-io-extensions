@@ -16,7 +16,7 @@ setTimeout(function() {
   const SELECT_CRAFT_FN_NAME = "Lapa13605Mauve" // OLD (JUL 8) OBFUSCATOR_FN("0x59e"); OLD
   const CLIENT_SELECT_INV_FN_NAME = OBFUSCATOR_FN("0x5c3");  // OLD
   const DRAW_UI_INVENTORY_FN_NAME = "Lapa13569Mauve"; // OLD
-//const GAME_TRIGGER_KEYUP_FN_NAME = OBFUSCATOR_FN("0x76d"); // OLD
+  const GAME_TRIGGER_KEYUP_FN_NAME = OBFUSCATOR_FN("0x76d"); // OLD
 //const CLIENT_BUILD_STOP_FN_NAME = OBFUSCATOR_FN("0x587"); // OLD
 //const CLIENT_DELETE_INV_FN_NAME = "Lapa13586Mauve" // OBFUSCATOR_FN("0x5b5");
 //const CLIENT_SOCKET_VAR_NAME = OBFUSCATOR_FN("0x564"); // OLD
@@ -290,7 +290,7 @@ const GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907 [OLD]
     oldSelectCraft.apply(this, arguments);
   };
   
-  // rearrange inventory
+/*  // rearrange inventory
   function reset_inventory_indexes() {
     user.inventory_index_to_mapped_index = []
     for(var index = 0; index < 15; index++) {
@@ -354,7 +354,7 @@ const GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907 [OLD]
     Cookies.set("starveio_ext_keymap", res);
   }
   
-  user.load_keycode_mapping();
+  user.load_keycode_mapping(); */
   
   function better_draw_amount(amount, loc, pushed) {
     var amount_as_img = get_amount_as_img(amount)
@@ -497,7 +497,7 @@ const GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907 [OLD]
     }
   };
   
-  var __old_inv_delete_item_fn = user[USER_INV_VAR_NAME][USER_INV_DELETE_ITEM_FN_NAME];
+/*  var __old_inv_delete_item_fn = user[USER_INV_VAR_NAME][USER_INV_DELETE_ITEM_FN_NAME];
   user[USER_INV_VAR_NAME][USER_INV_DELETE_ITEM_FN_NAME] = function(itemType, index) {
     var firstEmptySlot = user.inv.can_select.length - 1;
     var emptySlotCounter = firstEmptySlot;
@@ -518,7 +518,7 @@ const GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907 [OLD]
     }
     
     __old_inv_delete_item_fn.apply(this, [ itemType, index ]);
-  };
+  }; */
   
   // returns the visible index (1-indexed) of given by the specified user input or NaN
   function parse_inventory_index_from_string(str) 
@@ -532,7 +532,7 @@ const GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907 [OLD]
     return parseInt(str);
   }
   
-  function ext_try_command(spl_by_spaces) {
+function ext_try_command(spl_by_spaces) {
     if(spl_by_spaces[0] == "-swap") {
       if(spl_by_spaces.length != 3)
         return false;
