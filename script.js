@@ -3,8 +3,8 @@ setTimeout(function() {
   const SPRITE = Lapa13628Mauve; // OLD
   const client = Lapa13612Mauve; // OLD
   const world = Lapa13868Mauve;
-  const WORLD = Lapa13574Mauve; // OLD
-  user.show_spectators = user.Lapa13746Mauve; // OLD
+//const WORLD = Lapa13574Mauve; // OLD
+//user.show_spectators = user.Lapa13746Mauve; // OLD
   get_mouse_pos = Lapa13745Mauve;
   ctx = Lapa13676Mauve;
   
@@ -16,18 +16,18 @@ setTimeout(function() {
   const SELECT_CRAFT_FN_NAME = "Lapa13605Mauve" // OLD (JUL 8) OBFUSCATOR_FN("0x59e"); OLD
   const CLIENT_SELECT_INV_FN_NAME = OBFUSCATOR_FN("0x5c3");  // OLD
   const DRAW_UI_INVENTORY_FN_NAME = "Lapa13569Mauve"; // OLD
-  const GAME_TRIGGER_KEYUP_FN_NAME = OBFUSCATOR_FN("0x76d"); // OLD
-  const CLIENT_BUILD_STOP_FN_NAME = OBFUSCATOR_FN("0x587"); // OLD
-  const CLIENT_DELETE_INV_FN_NAME = "Lapa13586Mauve" // OBFUSCATOR_FN("0x5b5");
-  const CLIENT_SOCKET_VAR_NAME = OBFUSCATOR_FN("0x564"); // OLD
-  const GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907 [OLD]
-  const GAME_UPDATE_SCENE_FN_NAME = "Lapa13673Mauve" // just below game draw_UI [OLD]
-  const CLIENT_GET_TIME_FN_NAME = OBFUSCATOR_FN("0x59e") // OLD
-  const UI_PLAY_GAME_FUNCTION_NAME = "play_game"; // OLD
+//const GAME_TRIGGER_KEYUP_FN_NAME = OBFUSCATOR_FN("0x76d"); // OLD
+//const CLIENT_BUILD_STOP_FN_NAME = OBFUSCATOR_FN("0x587"); // OLD
+//const CLIENT_DELETE_INV_FN_NAME = "Lapa13586Mauve" // OBFUSCATOR_FN("0x5b5");
+//const CLIENT_SOCKET_VAR_NAME = OBFUSCATOR_FN("0x564"); // OLD
+const GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907 [OLD]
+//const GAME_UPDATE_SCENE_FN_NAME = "Lapa13673Mauve" // just below game draw_UI [OLD]
+//const CLIENT_GET_TIME_FN_NAME = OBFUSCATOR_FN("0x59e") // OLD
+//const UI_PLAY_GAME_FUNCTION_NAME = "play_game"; // OLD
   
-  const SPRITE_COUNTER_VAR_NAME = "Lapa13536Mauve" // look for "x" + c [OLD]
+//const SPRITE_COUNTER_VAR_NAME = "Lapa13536Mauve" // look for "x" + c [OLD]
   
-  const CURRENT_FRAME_RATE_VAR_NAME = 'Lapa13681Mauve'; // under window [OLD]
+//const CURRENT_FRAME_RATE_VAR_NAME = 'Lapa13681Mauve'; // under window [OLD]
   // END DEOBFUSCATION
   
   var unique_index_counter = 500;
