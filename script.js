@@ -10,7 +10,7 @@ setTimeout(function() {
   
   const OBFUSCATOR_FN = _0x7630;
   const USER_INV_VAR_NAME = "inv";
-  const WORLD_FAST_UNITS_ARR_NAME = OBFUSCATOR_FN("0x495"); // OLD
+  const WORLD_FAST_UNITS_ARR_NAME = OBFUSCATOR_FN("0x4f0");
   const USER_UID_VAR_NAME = "uid";
   const UPDATE_INV_BUTTONS_FN_NAME = OBFUSCATOR_FN("0x59b"); // OLD
   const SELECT_CRAFT_FN_NAME = "Lapa13605Mauve" // OLD (JUL 8) OBFUSCATOR_FN("0x59e"); OLD
