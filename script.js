@@ -8,7 +8,7 @@ setTimeout(function() {
   get_mouse_pos = Lapa13745Mauve;
   ctx = Lapa13676Mauve;
   
-  const OBFUSCATOR_FN = _0x88d0;
+  const OBFUSCATOR_FN = _0x7630;
   const USER_INV_VAR_NAME = "inv";
   const WORLD_FAST_UNITS_ARR_NAME = OBFUSCATOR_FN("0x495");
   const USER_UID_VAR_NAME = "uid";
@@ -283,9 +283,6 @@ setTimeout(function() {
       return;
     }
     
-    if(user.ext_auto_drink > 0.02) // don't redo it if we literally checked last frame
-      user.ext_auto_drink.delay = 5; // this ensures it will try to check
-    user.ext_auto_drink.consider_drink(true); // this helps prevent us from accidentally dehydrating
     if(user.auto_feed > 0.02) // don't redo it if we literally checked last frame
       user.auto_feed.delay = 5; // this ensures it will try to check
     user.auto_feed.update();
@@ -641,8 +638,6 @@ setTimeout(function() {
         user.show_spectators.enabled = !user.show_spectators.enabled;
       }else if(keycode == 'L'.charCodeAt(0)) {
         user.ext_fast_delete.enabled = !user.ext_fast_delete.enabled; 
-      }else if(keycode == 'K'.charCodeAt(0)) {
-        user.ext_auto_drink.enabled = !user.ext_auto_drink.enabled;
       }else 
       {
         var is_slot_index = typeof(keycode) === 'string' && keycode.startsWith('slot_');
@@ -704,6 +699,5 @@ setTimeout(function() {
   var old_game_update_scene = game[GAME_UPDATE_SCENE_FN_NAME];
   game[GAME_UPDATE_SCENE_FN_NAME] = function() {
     old_game_update_scene.apply(this, arguments);
-    user.ext_auto_drink.consider_drink(false);
   }
 }, 2000);
