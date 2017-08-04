@@ -4,7 +4,7 @@ setTimeout(function() {
   const client = Lapa13612Mauve; // OLD
   const world = Lapa13868Mauve;
 //const WORLD = Lapa13574Mauve; // OLD
-//user.show_spectators = user.Lapa13746Mauve; // OLD
+  user.show_spectators = user.Lapa13921Mauve;
   get_mouse_pos = Lapa13745Mauve;
   ctx = Lapa13676Mauve;
   
