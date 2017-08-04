@@ -1,39 +1,33 @@
 setTimeout(function() {
   // DEOBFUSCATION
-  var SPRITE = Lapa13628Mauve;
-  var client = Lapa13612Mauve;
-  var RECIPES = Lapa13627Mauve;
-  var world = Lapa13693Mauve;
-  var WORLD = Lapa13574Mauve;
+  const SPRITE = Lapa13628Mauve;
+  const client = Lapa13612Mauve;
+  const world = Lapa13693Mauve;
+  const WORLD = Lapa13574Mauve;
   user.show_spectators = user.Lapa13746Mauve;
   get_mouse_pos = Lapa13745Mauve;
   ctx = Lapa13676Mauve;
   
-  var OBFUSCATOR_FN = _0x88d0;
-  var USER_INV_VAR_NAME = "inv";
-  var USER_INV_DELETE_ITEM_FN_NAME = "delete_item";
-  var WORLD_FAST_UNITS_ARR_NAME = OBFUSCATOR_FN("0x495");
-  var USER_UID_VAR_NAME = "uid";
-  var UPDATE_INV_BUTTONS_FN_NAME = OBFUSCATOR_FN("0x59b");
-  var SELECT_CRAFT_FN_NAME = "Lapa13605Mauve" // OLD (JUL 8) OBFUSCATOR_FN("0x59e"); OLD
-  var CLIENT_SELECT_INV_FN_NAME = OBFUSCATOR_FN("0x5c3"); 
-  var DRAW_UI_INVENTORY_FN_NAME = "Lapa13569Mauve"; //
-  var GAME_TRIGGER_KEYUP_FN_NAME = OBFUSCATOR_FN("0x76d");
-  var CLIENT_BUILD_STOP_FN_NAME = OBFUSCATOR_FN("0x587"); 
-  var CLIENT_DELETE_INV_FN_NAME = "Lapa13586Mauve" // OBFUSCATOR_FN("0x5b5");
-  var CLIENT_SOCKET_VAR_NAME = OBFUSCATOR_FN("0x564");
-  var GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907
-  var GAME_UPDATE_SCENE_FN_NAME = "Lapa13673Mauve" // just below game draw_UI
-  var CLIENT_GET_TIME_FN_NAME = OBFUSCATOR_FN("0x59e")
-  var UI_PLAY_GAME_FUNCTION_NAME = "play_game";
+  const OBFUSCATOR_FN = _0x88d0;
+  const USER_INV_VAR_NAME = "inv";
+  const WORLD_FAST_UNITS_ARR_NAME = OBFUSCATOR_FN("0x495");
+  const USER_UID_VAR_NAME = "uid";
+  const UPDATE_INV_BUTTONS_FN_NAME = OBFUSCATOR_FN("0x59b");
+  const SELECT_CRAFT_FN_NAME = "Lapa13605Mauve" // OLD (JUL 8) OBFUSCATOR_FN("0x59e"); OLD
+  const CLIENT_SELECT_INV_FN_NAME = OBFUSCATOR_FN("0x5c3"); 
+  const DRAW_UI_INVENTORY_FN_NAME = "Lapa13569Mauve"; //
+  const GAME_TRIGGER_KEYUP_FN_NAME = OBFUSCATOR_FN("0x76d");
+  const CLIENT_BUILD_STOP_FN_NAME = OBFUSCATOR_FN("0x587"); 
+  const CLIENT_DELETE_INV_FN_NAME = "Lapa13586Mauve" // OBFUSCATOR_FN("0x5b5");
+  const CLIENT_SOCKET_VAR_NAME = OBFUSCATOR_FN("0x564");
+  const GAME_DRAW_UI_FN_NAME = OBFUSCATOR_FN("0x768"); //23907
+  const GAME_UPDATE_SCENE_FN_NAME = "Lapa13673Mauve" // just below game draw_UI
+  const CLIENT_GET_TIME_FN_NAME = OBFUSCATOR_FN("0x59e")
+  const UI_PLAY_GAME_FUNCTION_NAME = "play_game";
   
-  var SPRITE_COUNTER_VAR_NAME = "Lapa13536Mauve" // look for "x" + c
+  const SPRITE_COUNTER_VAR_NAME = "Lapa13536Mauve" // look for "x" + c
   
-  var INV_WHEAT_SEEDS_VAR_NAME = "INV_WHEAT_Lapa13797Mauve";
-  var INV_SEEDS_VAR_NAME = "INV_Lapa13797Mauve";
-  var USER_GAUGES_WATER_METER_VAR_NAME = 't';
-  
-  var CURRENT_FRAME_RATE_VAR_NAME = 'Lapa13681Mauve'; // under window
+  const CURRENT_FRAME_RATE_VAR_NAME = 'Lapa13681Mauve'; // under window
   // END DEOBFUSCATION
   
   var unique_index_counter = 500;
@@ -59,10 +53,7 @@ setTimeout(function() {
      [ 'Y', 'Open Map - open the larger map' ],
      [ 'R', 'Auto-Feed - auto-eat food when low' ],
      [ 'T', 'Auto-Book - auto-equip book on craft' ],
-   [ 'K', 'Auto-Drink - auto-drink water when low' ],
      [ 'P', 'Show Spectators - only in hunger games' ],
-     [ 'L', 'Fast-Delete - no warning on deleting items' ],
-     [ 'C', 'Clock - toggle the clock' ],
      [ '*', 'Type "-swap 1 2" to swap slots 1 and 2' ],
      [ '*', 'Type "-remap F 1" to have slot 1 bound to F' ],
      [ '*', 'Type "-unmapall" to clear all remaps' ]
@@ -164,60 +155,6 @@ setTimeout(function() {
     return bknd_canv;
   }
   
-  var cntr = 0;
-  var PAGES = [];
-  PAGES["CATEGORIES_1"] = cntr++;
-  PAGES["PICKAXES"] = cntr++;
-  PAGES["SWORDS"] = cntr++;
-  PAGES["SPEARS"] = cntr++;
-  PAGES["HAMMERS"] = cntr++;
-  PAGES["PLACEABLES"] = cntr++;
-  PAGES["PLACEABLES_2"] = cntr++;
-  PAGES["WALLS"] = cntr++;
-  PAGES["SPIKES"] = cntr++;
-  PAGES["DOORS"] = cntr++;
-  PAGES["FOOD_HEALING"] = cntr++;
-  PAGES["FOOD_HEALING_2"] = cntr++;
-  PAGES["HELMETS"] = cntr++;
-  PAGES["WEARABLES"] = cntr++;
-  PAGES["WEARABLES_2"] = cntr++;
-  PAGES["MISCELLANEOUS"] = cntr++;
-  PAGES["CRAFTING_ITEMS"] = cntr++;
-  
-  // All the create_recipe_page_ functions return [ canvas, buttons ]
-  // ex. [ img, [ { page_num, translate: {x, y}, width, height, normal, hovered, pushed, contains(x,y) }, ... ]
-  
-  // returns canvas
-  var __create_category_button = function(img, text, font, font_height, bknd_color, bknd_opacity, text_color) {
-    var edge_padding_x = 3;
-    var edge_padding_y = 3;
-    var img_text_spacing_x = 3;
-    var roundedness = 10;
-    
-    var bknd_canv = document.createElement("canvas");
-    var bknd_ctx = bknd_canv.getContext("2d");
-    
-    bknd_ctx.font = font
-    var text_metric = bknd_ctx.measureText(text);
-    
-    bknd_canv.width = edge_padding_x + img.width + img_text_spacing_x + text_metric.width + edge_padding_x;
-    bknd_canv.height = edge_padding_y + Math.max(font_height, img.height) + edge_padding_y;
-    
-    if(bknd_color != null) {
-      bknd_ctx.globalAlpha = bknd_opacity;
-      round_rect(bknd_ctx, 0, 0, bknd_canv.width, bknd_canv.height, roundedness);
-      fill_path(bknd_ctx, bknd_color);
-      bknd_ctx.globalAlpha = 1;
-    }
-    
-    bknd_ctx.font = font;
-    bknd_ctx.fillStyle = text_color;
-    bknd_ctx.drawImage(img, edge_padding_x, edge_padding_y);
-    bknd_ctx.fillText(text, edge_padding_x + img.width + img_text_spacing_x, edge_padding_y + img.height / 2);
-    
-    return bknd_canv;
-  }
-  
   function __ext_create_button(normal, hovered, pushed) {
     var res = { translate: { x: 0, y: 0 } }
     res.normal = normal;
@@ -229,159 +166,6 @@ setTimeout(function() {
       return x >= this.translate.x && y >= this.translate.y && x <= (this.translate.x + this.width) && y <= (this.translate.y + this.height);
     };
     return res;
-  }
-  // returns { translate: {x, y}, width, height, normal, hovered, pushed, contains(x,y) }
-  var create_category_button = function(img, text) {
-    var font = '24px Baloo Paaji';
-    var font_height = 24;
-    var text_color = '#FFF';
-    var hovered_background_color = '#000';
-    var pushed_background_color = '#000';
-    var hovered_background_opacity = 0.4;
-    var pushed_background_opacity = 0.8;
-    
-    var res = {
-      translate: { x: 0, y: 0 }  
-    }
-    
-    res.normal = CTI(__create_category_button(img, text, font, font_height, null, 0, text_color));
-    res.width = res.normal.width;
-    res.height = res.normal.height;
-    res.hovered = CTI(__create_category_button(img, text, font, font_height, hovered_background_color, hovered_background_opacity, text_color));
-    res.pushed = CTI(__create_category_button(img, text, font, font_height, pushed_background_color, pushed_background_opacity, text_color));
-    res.contains = function(x, y) {
-      return x >= this.translate.x && y >= this.translate.y && x <= (this.translate.x + this.width) && y <= (this.translate.y + this.height);
-    };
-    
-    return res;
-  }
-  
-  // categories, in the form [ { page_num, img, category_name }, ... ]
-  // returns [ canvas, context2d, buttons ]
-  var __create_recipe_page_categories = function(categories, prev_category_page_num, next_category_page_num) {
-    var columns = 3;
-    var left_edge_padding_x = 5;
-    var right_edge_padding_x = 5;
-    var top_edge_padding_y = 15;
-    var bot_edge_padding_y = 10;
-    var title_below_padding_y = 5;
-    var row_padding_y = 5;
-    var title_font = "bold 40px Baloo Paaji";
-    var title_font_height = 44;
-    var category_font = "24px Baloo Paaji";
-    var category_font_height = 24;
-    var category_img_text_padding_x = 5;
-    var padding_y_before_pagination = 8;
-    var column_padding_x = 5;
-    
-    var prev_button = __ext_create_button(sprite[SPRITE.ARROW_BACK][0], sprite[SPRITE.ARROW_BACK][1], sprite[SPRITE.ARROW_BACK][2]);
-    var next_button = __ext_create_button(sprite[SPRITE.ARROW_NEXT][0], sprite[SPRITE.ARROW_NEXT][1], sprite[SPRITE.ARROW_NEXT][2]);
-    
-    var title = 'CATEGORIES';
-    
-    var bknd_canv = document.createElement("canvas");
-    var bknd_ctx = bknd_canv.getContext("2d");
-    
-    var title = 'CATEGORIES'
-    
-    bknd_ctx.font = title_font;
-    var title_width = bknd_ctx.measureText(title).width;
-    
-    bknd_ctx.font = category_font;
-    var row_height_prev = 0;
-    var max_column_width = 0;
-    var total_height = top_edge_padding_y + title_font_height + title_below_padding_y;
-    for(var i = 0; i < categories.length; i++) {
-      if(i != 0 && i % columns == 0) {
-        total_height += row_padding_y + row_height_prev;
-        row_height_prev = 0;
-      }
-      
-      var cat_width = categories[i].img.width + category_img_text_padding_x + bknd_ctx.measureText(categories[i].category_name).width;
-      max_column_width = Math.max(max_column_width, cat_width);
-      row_height_prev = Math.max(row_height_prev, categories[i].img.height);
-    }
-    total_height += row_padding_y + row_height_prev;
-    if(prev_category_page_num != null || next_category_page_num != null) {
-      total_height += padding_y_before_pagination + Math.max(prev_button.height, next_button.height);
-    }
-    total_height += bot_edge_padding_y;
-    var total_width = left_edge_padding_x + max_column_width * columns + column_padding_x * (columns - 1) + right_edge_padding_x;
-    
-    bknd_canv.width = total_width;
-    bknd_canv.height = total_height;
-    
-    bknd_ctx.globalAlpha = 0.5;
-    round_rect(bknd_ctx, 0, 0, bknd_canv.width, bknd_canv.height, 10);
-    fill_path(bknd_ctx, '#000');
-    bknd_ctx.globalAlpha = 1;
-    
-    bknd_ctx.font = title_font;
-    bknd_ctx.fillStyle = '#FFF';
-    var title_metr = bknd_ctx.measureText(title);
-    bknd_ctx.fillText(title, bknd_canv.width / 2 - title_metr.width / 2, top_edge_padding_y + title_font_height / 2);
-    
-    var buttons = []
-    bknd_ctx.font = category_font;
-    var y = top_edge_padding_y + title_font_height + title_below_padding_y;
-    var x = left_edge_padding_x;
-    row_height_prev = 0;
-    for(var i = 0; i < categories.length; i++) {
-      if(i != 0 && i % columns == 0) {
-        y += row_padding_y + row_height_prev;
-        x = left_edge_padding_x;
-      }
-      
-      var but = create_category_button(categories[i].img, categories[i].category_name);
-      but.page_num = categories[i].page_num;
-      but.translate.x = x;
-      but.translate.y = y;
-      buttons[buttons.length] = but;
-      
-      row_height_prev = Math.max(row_height_prev, categories[i].img.height);
-      x += max_column_width + column_padding_x;
-    }
-    y += row_padding_y + row_height_prev;
-    
-    if(prev_category_page_num != null) {
-      prev_button.translate.x = left_edge_padding_x;
-      prev_button.translate.y = total_height - prev_button.height - bot_edge_padding_y;
-      
-      buttons[button.length] = prev_button;
-    }
-    
-    if(next_category_page_num != null) {
-      next_button.translate.x = total_width - next_button.width - right_edge_padding_x;
-      next_button.translate.y = total_height - next_button.height - bot_edge_padding_y;
-      
-      buttons[buttons.length] = next_button;
-    }
-    
-    return [ bknd_canv, bknd_ctx, buttons ];
-  }
-  
-  var create_recipe_page_categories_1 = function() {
-    var tmp = __create_recipe_page_categories([ 
-      { page_num: PAGES.PICKAXES, img: sprite[SPRITE.INV_PICK_WOOD][1], category_name: "Pickaxes" },
-      { page_num: PAGES.SWORDS, img: sprite[SPRITE.INV_SWORD][1], category_name: "Swords" },
-      { page_num: PAGES.SPEARS, img: sprite[SPRITE.INV_SPEAR][1], category_name: "Spears" },
-      { page_num: PAGES.HAMMERS, img: sprite[SPRITE.INV_HAMMER][1], category_name: "Hammers" },
-      { page_num: PAGES.PLACEABLES, img: sprite[SPRITE.INV_FIRE][1], category_name: "Placeables" },
-      { page_num: PAGES.WALLS, img: sprite[SPRITE.INV_WALL][1], category_name: "Walls" },
-      { page_num: PAGES.SPIKES, img: sprite[SPRITE.INV_SPIKE][1], category_name: "Spikes" },
-      { page_num: PAGES.DOORS, img: sprite[SPRITE.INV_DOOR_WOOD_CLOSE][1], category_name: "Doors" },
-      { page_num: PAGES.FOOD_HEALING, img: sprite[SPRITE.INV_COOKED_MEAT][1], category_name: "Food & Healing" },
-      { page_num: PAGES.HELMETS, img: sprite[SPRITE.INV_STONE_HELMET][1], category_name: "Helmets" },
-      { page_num: PAGES.WEARABLES, img: sprite[SPRITE.INV_EARMUFFS][1], category_name: "Wearables" },
-      { page_num: PAGES.MISCELLANEOUS, img: sprite[SPRITE.INV_LOCK][1], category_name: "Misc" },
-      { page_num: PAGES.CRAFTING_ITEMS, img: sprite[SPRITE.INV_PAPER][1], category_name: "Crafting Items" },
-    ]);
-    
-    var bknd_canv = tmp[0];
-    var bknd_ctx = tmp[1];
-    var buttons = tmp[2];
-    
-    return [ CTI(bknd_canv), buttons ];
   }
   
   function get_amount_as_img(amount) {
@@ -396,9 +180,6 @@ setTimeout(function() {
 
   SPRITE["EXT_HELP"] = find_unique_index();
   sprite[SPRITE.EXT_HELP] = CTI(create_help());
-  
-  SPRITE["EXT_AUTO_DRINK"] = find_unique_index();
-  sprite[SPRITE.EXT_AUTO_DRINK] = create_text(1, "Auto-Drink", 25, "#FFF", void 0, void 0, "#000", 5, 140);
   
   SPRITE["ARROW_NEXT"] = find_unique_index();
   sprite[SPRITE.ARROW_NEXT] = [ CTI(create_arrow_next('#c3c3c3')), CTI(create_arrow_next('#d3d3d3')), CTI(create_arrow_next('#FFF')) ];
@@ -437,15 +218,8 @@ setTimeout(function() {
     oldGameUpdate.apply(this);
     user.auto_book.translate.x = game.leaderboard.translate.x - sprite[SPRITE.AUTO_BOOK].width - 10;
     user.auto_book.translate.y = user.show_spectators.translate.y + sprite[SPRITE.SHOW_SPECTATORS].height + 5;
-    user.ext_fast_delete.translate.x = game.leaderboard.translate.x - sprite[SPRITE.EXT_FAST_DELETE].width - 10;
-    user.ext_fast_delete.translate.y = user.auto_book.translate.y + sprite[SPRITE.AUTO_BOOK].height + 5;
-    user.ext_auto_drink.translate.x = game.leaderboard.translate.x - sprite[SPRITE.EXT_AUTO_DRINK].width - 10;
-    user.ext_auto_drink.translate.y = user.ext_fast_delete.translate.y + sprite[SPRITE.EXT_AUTO_DRINK].height + 5;
     user.ext_help.translate.x = can.width / 2 - sprite[SPRITE.EXT_HELP].width / 2;
     user.ext_help.translate.y = can.height / 2 - sprite[SPRITE.EXT_HELP].height / 2;
-    
-    user.ext_clock.translate.x = can.width - user.ext_clock.radius * 2 - 10;
-    user.ext_clock.translate.y = game.leaderboard.translate.y + game.leaderboard.img.height + 10;
   };
 
   function draw_ext_help() {
@@ -464,10 +238,7 @@ setTimeout(function() {
   game[GAME_DRAW_UI_FN_NAME] = function() {
     oldGameDrawUI.apply(this, arguments);
     draw_ext_auto_book();
-    draw_ext_fast_delete();
-    draw_ext_auto_drink();
     draw_ext_help();
-    draw_ext_clock();
   };
 
   var my_trigger_key_up = function(c) {
@@ -480,8 +251,6 @@ setTimeout(function() {
         user.auto_book.enabled = !user.auto_book.enabled;
       }else if(keycode == 72) {
         user.ext_help.enabled = !user.ext_help.enabled;  
-      }else if(keycode == 67) {
-        user.ext_clock.enabled = !user.ext_clock.enabled;
       }
     }
   };
@@ -931,180 +700,6 @@ setTimeout(function() {
         //window.removeEventListener(_0x88d0("0x6d8"), this[_0x88d0("0x76d")], !1);
         window.removeEventListener("keydown", game[_0x88d0("0x779")], !1)
     }
-  
-  // alert on delete inventory
-  SPRITE["EXT_FAST_DELETE"] = find_unique_index();
-  sprite[SPRITE.EXT_FAST_DELETE] = create_text(1, "Fast-Delete", 25, "#FFF", void 0, void 0, "#000", 5, 140);
-
-  user.ext_fast_delete = { enabled: false, translate: { x: 0, y: 0 } };
-  
-  function draw_ext_fast_delete() {
-    if(user.ext_fast_delete.enabled) {
-      ctx.drawImage(sprite[SPRITE.EXT_FAST_DELETE], user.ext_fast_delete.translate.x, user.ext_fast_delete.translate.y);
-    }
-  }
-  
-  var actual_delete_inv = client[CLIENT_DELETE_INV_FN_NAME];
-  client[CLIENT_DELETE_INV_FN_NAME] = function(c, f) {
-    if(user.ext_fast_delete.enabled) {
-      actual_delete_inv.apply(client, [c, f])
-      return;
-    }
-    
-    // we use setTimeout to ensure the context menu isn't brought up 
-    setTimeout(function() {
-      swal({
-        title: "Are you sure?",
-        text: "You will not be able to recover this item!",
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Yes, delete it!",
-        closeOnConfirm: true
-      },
-      function(){
-        actual_delete_inv.apply(client, [ c, f ]);
-      });
-    }, 5);
-  };
-  
-  // clock
-  user.ext_clock = {
-    enabled: true,
-    translate: { x: 0, y: 0 },
-    last_time: -1,
-    last_transition_time: -1,
-    extrapolated_transition_time: -1,
-    radius: 50,
-    time_per_half_day_ms: 1000 * 60 * 4
-  }
-  
-  function init_clock() {
-    var img = new Image();
-    img.onload = function() {
-      var clock_index = find_unique_index();
-      SPRITE["EXT_CLOCK"] = clock_index;
-      sprite[SPRITE.EXT_CLOCK] = img;
-    }
-    img.src = 'http://www.clker.com/cliparts/Y/F/q/S/J/O/dabnite-th.png';
-    
-    var canv = document.createElement("canvas");
-    var ctx = canv.getContext("2d");
-    
-    canv.width = 8;
-    canv.height = 8;
-    ctx.fillStyle = "#FFF";
-    ctx.strokeStyle = "#000";
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.ellipse(4, 4, 3, 3, 0, 0, Math.PI * 2, false);
-    ctx.fill();
-    ctx.stroke();
-    
-    var img2 = new Image();
-    img2.onload = function() {
-      var my_index = find_unique_index();
-      SPRITE["EXT_CLOCK_MARKER"] = my_index;
-      sprite[SPRITE.EXT_CLOCK_MARKER] = img2;
-    }
-    img2.src = canv.toDataURL("image/png");
-  }
-  
-  init_clock();
-  
-  var old_get_time = client[CLIENT_GET_TIME_FN_NAME];
-  client[CLIENT_GET_TIME_FN_NAME] = function(c) {
-    if(c != world.time) {
-      var now = new Date().getTime();
-      user.ext_clock.last_time = c;
-      user.ext_clock.last_transition_time = now;
-      user.ext_clock.extrapolated_transition_time = now + user.ext_clock.time_per_half_day_ms;
-    }
-    
-    old_get_time.apply(this, [ c ]);
-  };
-  
-  function draw_ext_clock() {
-    if(!("EXT_CLOCK" in SPRITE))
-      return; // clock not yet loaded
-    if(!("EXT_CLOCK_MARKER" in SPRITE))
-      return; // clock marker not yet loaded
-    if(!user.ext_clock.enabled)
-      return;
-    if(user.ext_clock.extrapolated_transition_time < 0)
-      return;
-    
-    var now = new Date().getTime();
-    var time_since_transition = now - user.ext_clock.last_transition_time;
-    var perc_progress_to_next;
-    if(time_since_transition >= user.ext_clock.time_per_half_day_ms) {
-      perc_progress_to_next = 1;
-    }else {
-      perc_progress_to_next = time_since_transition / user.ext_clock.time_per_half_day_ms;
-    }
-    
-    var x = 0;
-    var y = 0;
-    if(user.ext_clock.last_time == SPRITE.DAY) {
-      if(perc_progress_to_next < 0.5) {
-        var ang = perc_progress_to_next * Math.PI;
-        x = -Math.cos(ang);
-        y = -Math.sin(ang);
-      }else {
-        var ang = (1.0 - perc_progress_to_next) * Math.PI;
-        x = Math.cos(ang);
-        y = -Math.sin(ang);
-      }
-    }else {
-      if(perc_progress_to_next < 0.5) {
-        var ang = perc_progress_to_next * Math.PI;
-        x = Math.cos(ang);
-        y = Math.sin(ang);
-      }else {
-        var ang = (1.0 - perc_progress_to_next) * Math.PI;
-        x = -Math.cos(ang);
-        y = Math.sin(ang);
-      }
-    }
-    
-    x = user.ext_clock.radius + x * user.ext_clock.radius - 4;
-    y = user.ext_clock.radius + y * user.ext_clock.radius - 4;
-    
-    ctx.drawImage(sprite[SPRITE.EXT_CLOCK], user.ext_clock.translate.x, user.ext_clock.translate.y);
-    ctx.drawImage(sprite[SPRITE.EXT_CLOCK_MARKER], user.ext_clock.translate.x + x, user.ext_clock.translate.y + y);
-  }
-  
-  // AUTO-DRINK
-  user.ext_auto_drink = {
-    enabled: false,
-    translate: {
-      x: 0,
-      y: 0
-    },
-    delay: 0,
-    consider_drink: function(trying_to_craft_or_nil) {
-      if(this.enabled && user.craft.id < 0) {
-        if(this.delay < 10)
-          this.delay += window[CURRENT_FRAME_RATE_VAR_NAME]
-        var current_water = user.gauges[USER_GAUGES_WATER_METER_VAR_NAME];
-        
-        var max_water_to_drink = 0.05;
-        if(trying_to_craft_or_nil)
-          max_water_to_drink = 0.2;
-        if(this.delay > 2 && current_water < max_water_to_drink) {
-          if(user.inv.n[INV.BOTTLE_FULL]) {
-            client[CLIENT_SELECT_INV_FN_NAME](INV.BOTTLE_FULL, user.inv.find_item(INV.BOTTLE_FULL));
-          }
-          this.delay = 0;
-        }
-      }
-    }
-  };
-  function draw_ext_auto_drink() {
-    if(user.ext_auto_drink.enabled) {
-      ctx.drawImage(sprite[SPRITE.EXT_AUTO_DRINK], user.ext_auto_drink.translate.x, user.ext_auto_drink.translate.y);
-    }
-  }
   
   var old_game_update_scene = game[GAME_UPDATE_SCENE_FN_NAME];
   game[GAME_UPDATE_SCENE_FN_NAME] = function() {
